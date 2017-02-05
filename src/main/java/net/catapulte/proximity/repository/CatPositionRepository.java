@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface CatPositionRepository extends MongoRepository<CatData, String> {
 
-    List<CatData> findByPositionWithin(Circle c);
+    List<CatData> findByIdNotAndPositionWithin(String id,Circle c);
 }
