@@ -9,6 +9,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: scp -i id_rsa build/libs/promixity-aggregator-*.jar lolcat@lolcat.passoire.net:~/proximity-aggregator.jar
+  script: scp -i id_rsa build/libs/proximity-aggregator-*.jar lolcat@lolcat.passoire.net:~/proximity-aggregator.jar
   on:
     branch: master
