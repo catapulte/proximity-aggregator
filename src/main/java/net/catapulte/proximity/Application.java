@@ -24,8 +24,8 @@ public class Application {
     @Bean
     public ConnectionFactory rabbitmqConnectionFactory(@Value("${amqp.host:localhost}") String host,
                                                        @Value("${amqp.port:5672}") int port,
-                                                       @Value("${amqp.host:guest}") String user,
-                                                       @Value("${amqp.host:guest}") String pass) {
+                                                       @Value("${amqp.user:guest}") String user,
+                                                       @Value("${amqp.pass:guest}") String pass) {
         CachingConnectionFactory cf = new CachingConnectionFactory();
         cf.setHost(host);
         cf.setPort(port);
